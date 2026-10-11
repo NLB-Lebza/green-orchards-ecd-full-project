@@ -1,0 +1,104 @@
+.detail-page {
+  padding: 4rem 1.5rem 5rem;
+  background: linear-gradient(180deg, #f7f2eb 0%, #f4eadf 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.detail-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.back-link {
+  align-self: flex-start;
+  border: none;
+  background: transparent;
+  color: #7a4b2d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.detail-card {
+  background: #fff;
+  border: 1px solid rgba(87, 58, 42, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(81, 55, 43, 0.08);
+  padding: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: #7a4b2d;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+h1 {
+  margin: 0 0 2rem;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  color: #39271d;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detail-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: #f8f3ee;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.detail-grid span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6d5a4f;
+}
+
+.detail-grid strong {
+  color: #2d211d;
+  font-size: 1rem;
+}
+
+.notes-box {
+  background: #fffaf5;
+  border: 1px solid rgba(122, 75, 45, 0.12);
+  border-radius: 18px;
+  padding: 1.4rem;
+}
+
+.notes-box h2 {
+  margin: 0 0 0.5rem;
+  color: #39271d;
+}
+
+.notes-box p {
+  margin: 0;
+  color: #4c3a32;
+  line-height: 1.7;
+}
+
+.message {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.message.error {
+  background: #ffe4e1;
+  color: #8d2d2d;
+}

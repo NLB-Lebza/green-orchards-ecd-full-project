@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/gallery/gallery.component.scss"],
+  "sourcesContent": [".gallery-page {\r\n  padding: 72px 0 96px;\r\n}\r\n\r\n.page-header h1 {\r\n  margin: 0;\r\n  font-size: clamp(2.3rem, 4vw, 3.4rem);\r\n  line-height: 1.1;\r\n  color: #1b5e20;\r\n}\r\n\r\n.gallery-grid {\r\n  margin-top: 2rem;\r\n}\r\n\r\n.gallery-card {\r\n  padding: 2rem 1.6rem;\r\n  text-align: center;\r\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\r\n}\r\n\r\n.gallery-card:hover {\r\n  transform: translateY(-4px);\r\n  box-shadow: 0 18px 32px rgba(27, 94, 32, 0.12);\r\n}\r\n\r\n.card-icon {\r\n  display: grid;\r\n  place-items: center;\r\n  width: 72px;\r\n  height: 72px;\r\n  margin: 0 auto 1rem;\r\n  border-radius: 50%;\r\n  background: linear-gradient(135deg, #edf7ee, #dff5e0);\r\n  font-size: 2.2rem;\r\n}\r\n\r\n.gallery-card h3 {\r\n  margin: 0 0 0.6rem;\r\n  color: #1b5e20;\r\n}\r\n\r\n.gallery-card p {\r\n  margin: 0;\r\n  line-height: 1.7;\r\n  color: #4d6253;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA,KAAA,EAAA;;AAGF,CAAA,YAAA;AACE,UAAA;AACA,aAAA,MAAA,MAAA,EAAA,GAAA,EAAA;AACA,eAAA;AACA,SAAA;;AAGF,CAAA;AACE,cAAA;;AAGF,CAAA;AACE,WAAA,KAAA;AACA,cAAA;AACA,cAAA,UAAA,KAAA,IAAA,EAAA,WAAA,KAAA;;AAGF,CANA,YAMA;AACE,aAAA,WAAA;AACA,cAAA,EAAA,KAAA,KAAA,KAAA,EAAA,EAAA,EAAA,EAAA,EAAA,EAAA;;AAGF,CAAA;AACE,WAAA;AACA,eAAA;AACA,SAAA;AACA,UAAA;AACA,UAAA,EAAA,KAAA;AACA,iBAAA;AACA;IAAA;MAAA,MAAA;MAAA,OAAA;MAAA;AACA,aAAA;;AAGF,CAtBA,aAsBA;AACE,UAAA,EAAA,EAAA;AACA,SAAA;;AAGF,CA3BA,aA2BA;AACE,UAAA;AACA,eAAA;AACA,SAAA;;",
+  "names": []
+}

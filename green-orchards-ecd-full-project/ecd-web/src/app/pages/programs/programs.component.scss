@@ -1,0 +1,53 @@
+.programs-page {
+  padding: 72px 0 96px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  color: #1b5e20;
+}
+
+.programs-grid {
+  margin-top: 2rem;
+}
+
+.program-card {
+  position: relative;
+  padding: 1.6rem 1.5rem 1.5rem;
+  overflow: hidden;
+}
+
+.program-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 86px;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.program-card h2 {
+  margin: 0 0 0.7rem;
+  color: #1b5e20;
+  font-size: 1.5rem;
+}
+
+.program-card p {
+  margin: 0 0 1rem;
+  line-height: 1.75;
+  color: #4d6253;
+}
+
+.program-card strong {
+  color: #2e7d32;
+  font-size: 0.95rem;
+}

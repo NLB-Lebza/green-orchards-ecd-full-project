@@ -1,0 +1,31 @@
+using EcdApi.Data;
+using EcdApi.Services;
+using EcdApi.Services.Interfaces;
+using EcdApi.Validation.Auth;
+using EcdApi.Validation.Enrollment;
+using EcdApi.Validation.Gallery;
+using EcdApi.Validation.Programs;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
+builder.Services.AddDbContext<AppDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<LoginValidator>();
+builder.Services.AddScoped<RegisterValidator>();
+builder.Services.AddScoped<EnrollmentValidator>();
+builder.Services.AddScoped<ProgramValidator>();
+builder.Services.AddScoped<GalleryValidator>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
+builder.Services.AddScoped<IProgramService, ProgramService>();
+builder.Services.AddScoped<IGalleryService, GalleryService>();
+builder.Services.AddCors(o => o.AddPolicy("AngularClient", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+var app = builder.Build();
+if (app.Environment.IsDevelopment()) { app.UseSwagger(); app.UseSwaggerUI(); }
+app.UseHttpsRedirection();
+app.UseCors("AngularClient");
+app.UseAuthorization();
+app.MapControllers();
+app.Run();

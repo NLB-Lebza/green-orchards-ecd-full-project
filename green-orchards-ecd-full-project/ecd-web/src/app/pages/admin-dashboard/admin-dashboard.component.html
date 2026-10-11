@@ -1,0 +1,128 @@
+<section class="admin-page">
+  <div class="container">
+    <header class="page-header">
+      <div class="page-header-row">
+        <div>
+          <p class="eyebrow">ADMIN DASHBOARD</p>
+          <h1>Center Management</h1>
+        </div>
+        <button class="logout-button" type="button" (click)="logout()">Logout</button>
+      </div>
+    </header>
+
+    @if (errorMessage) {
+      <div class="message error">{{ errorMessage }}</div>
+    }
+
+    @if (successMessage) {
+      <div class="message success">{{ successMessage }}</div>
+    }
+
+    @if (loading) {
+      <div class="loading">Loading dashboard data…</div>
+    } @else {
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span>Total Accounts</span>
+          <strong>{{ totalAccounts() }}</strong>
+        </article>
+        <article class="stat-card">
+          <span>Registered Children</span>
+          <strong>{{ totalChildren() }}</strong>
+        </article>
+      </div>
+
+      <div class="panel-grid">
+        <section class="panel">
+          <h2>Accounts</h2>
+
+          @if (editingUserId !== null) {
+            <div class="edit-form">
+              <label>
+                <span>Full name</span>
+                <input [(ngModel)]="editForm.fullName" name="editFullName" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input [(ngModel)]="editForm.email" name="editEmail" />
+              </label>
+              <label>
+                <span>Role</span>
+                <select [(ngModel)]="editForm.role" name="editRole">
+                  <option value="Admin">Admin</option>
+                  <option value="Staff">Staff</option>
+                </select>
+              </label>
+              <label>
+                <span>New password (optional)</span>
+                <input [(ngModel)]="editForm.password" type="password" name="editPassword" placeholder="Leave blank to keep current" />
+              </label>
+              <div class="inline-actions">
+                <button type="button" class="btn btn-primary" (click)="saveUser()">Save</button>
+                <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+              </div>
+            </div>
+          }
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Created</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (account of accounts; track account.id) {
+                  <tr>
+                    <td>{{ account.fullName }}</td>
+                    <td>{{ account.email }}</td>
+                    <td>{{ account.role }}</td>
+                    <td>{{ account.createdAt | date: 'dd MMM yyyy' }}</td>
+                    <td>
+                      <div class="action-stack">
+                        <button type="button" class="mini-btn" (click)="startEditAccount(account)">Edit</button>
+                        <button type="button" class="mini-btn danger" (click)="deleteUser(account.id)">Delete</button>
+                      </div>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Registered Children</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Parent</th>
+                  <th>Child</th>
+                  <th>Age</th>
+                  <th>Contact</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (child of children; track child.id) {
+                  <tr>
+                    <td>{{ child.parentName }}</td>
+                    <td>{{ child.childName }}</td>
+                    <td>{{ child.childAge }}</td>
+                    <td>{{ child.email }}<br>{{ child.phone }}</td>
+                    <td><button type="button" class="mini-btn" (click)="openChildDetails(child.id)">View</button></td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    }
+  </div>
+</section>

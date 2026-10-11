@@ -1,0 +1,19 @@
+<section class="page programs-page">
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">OUR PROGRAMS</p>
+      <h1>Our Programs</h1>
+    </header>
+
+    <p class="page-intro">Age-appropriate programs designed to help every child grow.</p>
+
+    <div class="grid programs-grid">
+      <article class="card program-card" *ngFor="let p of programs">
+        <div class="program-badge">{{ p.minimumAge }}–{{ p.maximumAge }}</div>
+        <h2>{{ p.name }}</h2>
+        <p>{{ p.description }}</p>
+        <strong>Ages {{ p.minimumAge }}–{{ p.maximumAge }}</strong>
+      </article>
+    </div>
+  </div>
+</section>

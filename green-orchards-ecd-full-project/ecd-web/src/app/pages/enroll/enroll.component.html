@@ -1,0 +1,49 @@
+<section class="page enroll-page">
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">ENROLLMENT</p>
+      <h1>Enrollment Inquiry</h1>
+    </header>
+
+    <p class="page-intro">Complete the form and Green Orchards can follow up with you.</p>
+
+    <form class="card enrollment-form" (ngSubmit)="submit()">
+      <div class="field-grid">
+        <label class="field">
+          <span>Parent Name</span>
+          <input [(ngModel)]="form.parentName" name="parentName">
+        </label>
+
+        <label class="field">
+          <span>Child Name</span>
+          <input [(ngModel)]="form.childName" name="childName">
+        </label>
+
+        <label class="field">
+          <span>Child Age</span>
+          <input type="number" [(ngModel)]="form.childAge" name="childAge" min="0" max="12">
+        </label>
+
+        <label class="field">
+          <span>Email</span>
+          <input type="email" [(ngModel)]="form.email" name="email">
+        </label>
+
+        <label class="field">
+          <span>Phone</span>
+          <input [(ngModel)]="form.phone" name="phone">
+        </label>
+      </div>
+
+      <label class="field full-width">
+        <span>Message</span>
+        <textarea [(ngModel)]="form.message" name="message"></textarea>
+      </label>
+
+      <div class="form-actions">
+        <button class="btn" type="submit">Submit Inquiry</button>
+        <p class="form-message">{{message}}</p>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/home/home.component.scss"],
+  "sourcesContent": [".hero>div>span {\r\n    font-weight: 800;\r\n    letter-spacing: 2px;\r\n    color: #2e7d32\r\n}"],
+  "mappings": ";AAAA,CAAA,KAAA,EAAA,IAAA,EAAA;AACI,eAAA;AACA,kBAAA;AACA,SAAA;;",
+  "names": []
+}

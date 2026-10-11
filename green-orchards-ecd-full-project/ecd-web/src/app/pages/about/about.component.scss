@@ -1,0 +1,52 @@
+.about-page {
+  padding: 72px 0 96px;
+}
+
+.page-header {
+  margin-bottom: 1.75rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #2e7d32;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  color: #1b5e20;
+}
+
+.page-intro {
+  max-width: 700px;
+  margin: 0 0 2rem;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #4d6253;
+}
+
+.about-card {
+  padding: 2rem;
+}
+
+.about-card h2 {
+  margin: 0 0 0.6rem;
+  color: #1b5e20;
+  font-size: 1.6rem;
+}
+
+.about-card p {
+  margin: 0 0 1.5rem;
+  line-height: 1.8;
+  color: #4d6253;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}

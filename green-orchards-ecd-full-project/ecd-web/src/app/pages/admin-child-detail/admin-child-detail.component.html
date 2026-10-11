@@ -1,0 +1,29 @@
+<section class="detail-page">
+  <div class="container detail-shell">
+    <button type="button" class="back-link" (click)="goBack()">← Back to dashboard</button>
+
+    @if (errorMessage) {
+      <div class="message error">{{ errorMessage }}</div>
+    }
+
+    @if (child) {
+      <article class="detail-card">
+        <p class="eyebrow">ENROLLMENT DETAILS</p>
+        <h1>{{ child.childName }}</h1>
+
+        <div class="detail-grid">
+          <div><span>Parent</span><strong>{{ child.parentName }}</strong></div>
+          <div><span>Child age</span><strong>{{ child.childAge }}</strong></div>
+          <div><span>Email</span><strong>{{ child.email }}</strong></div>
+          <div><span>Phone</span><strong>{{ child.phone }}</strong></div>
+          <div><span>Submitted</span><strong>{{ child.submittedAt | date: 'dd MMM yyyy, h:mm a' }}</strong></div>
+        </div>
+
+        <div class="notes-box">
+          <h2>Notes</h2>
+          <p>{{ child.message || 'No additional notes were provided.' }}</p>
+        </div>
+      </article>
+    }
+  </div>
+</section>

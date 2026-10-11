@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/about/about.component.scss"],
+  "sourcesContent": [".about-page {\r\n  padding: 72px 0 96px;\r\n}\r\n\r\n.page-header {\r\n  margin-bottom: 1.75rem;\r\n}\r\n\r\n.eyebrow {\r\n  display: inline-block;\r\n  margin: 0 0 0.75rem;\r\n  font-size: 0.72rem;\r\n  letter-spacing: 0.14em;\r\n  text-transform: uppercase;\r\n  font-weight: 800;\r\n  color: #2e7d32;\r\n}\r\n\r\n.page-header h1 {\r\n  margin: 0;\r\n  font-size: clamp(2.3rem, 4vw, 3.4rem);\r\n  line-height: 1.1;\r\n  color: #1b5e20;\r\n}\r\n\r\n.page-intro {\r\n  max-width: 700px;\r\n  margin: 0 0 2rem;\r\n  font-size: 1.08rem;\r\n  line-height: 1.7;\r\n  color: #4d6253;\r\n}\r\n\r\n.about-card {\r\n  padding: 2rem;\r\n}\r\n\r\n.about-card h2 {\r\n  margin: 0 0 0.6rem;\r\n  color: #1b5e20;\r\n  font-size: 1.6rem;\r\n}\r\n\r\n.about-card p {\r\n  margin: 0 0 1.5rem;\r\n  line-height: 1.8;\r\n  color: #4d6253;\r\n}\r\n\r\n.about-card p:last-child {\r\n  margin-bottom: 0;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA,KAAA,EAAA;;AAGF,CAAA;AACE,iBAAA;;AAGF,CAAA;AACE,WAAA;AACA,UAAA,EAAA,EAAA;AACA,aAAA;AACA,kBAAA;AACA,kBAAA;AACA,eAAA;AACA,SAAA;;AAGF,CAdA,YAcA;AACE,UAAA;AACA,aAAA,MAAA,MAAA,EAAA,GAAA,EAAA;AACA,eAAA;AACA,SAAA;;AAGF,CAAA;AACE,aAAA;AACA,UAAA,EAAA,EAAA;AACA,aAAA;AACA,eAAA;AACA,SAAA;;AAGF,CAAA;AACE,WAAA;;AAGF,CAJA,WAIA;AACE,UAAA,EAAA,EAAA;AACA,SAAA;AACA,aAAA;;AAGF,CAVA,WAUA;AACE,UAAA,EAAA,EAAA;AACA,eAAA;AACA,SAAA;;AAGF,CAhBA,WAgBA,CAAA;AACE,iBAAA;;",
+  "names": []
+}

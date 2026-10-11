@@ -1,0 +1,38 @@
+<div class="login-page account-page">
+    <section class="login-visual">
+        <div class="visual-content"><span class="eyebrow">GREEN ORCHARDS ECD CENTER</span>
+            <h1>Nurturing Young Minds,<span>Growing Bright Futures</span></h1>
+            <p>Join a caring space where children can grow in confidence, creativity, and joy.</p>
+        </div>
+    </section>
+    <section class="login-section">
+        <div class="login-card">
+            <div class="logo">
+                <div class="logo-tree">🌳</div>
+                <div>
+                    <h2>GREEN</h2>
+                    <h2>ORCHARDS</h2><span>Day Care Centre</span>
+                </div>
+            </div>
+            <div class="login-heading">
+                <h1>Create an Account</h1>
+                <p>Set up your account to get started</p>
+            </div>
+            <form (ngSubmit)="createAccount()">
+                <div class="form-group"><label>Full Name</label><input type="text" [(ngModel)]="fullName" name="fullName"
+                        placeholder="Enter your full name"></div>
+                <div class="form-group"><label>Email</label><input type="email" [(ngModel)]="email" name="email"
+                        placeholder="Enter your email"></div>
+                <div class="form-group"><label>Password</label>
+                    <div class="password-row"><input [type]="showPassword?'text':'password'" [(ngModel)]="password"
+                            name="password" placeholder="Create a password"><button type="button"
+                            (click)="togglePassword()">{{showPassword?'Hide':'Show'}}</button></div>
+                </div>
+                @if(errorMessage){<div class="message error">{{errorMessage}}</div>}@if(successMessage){<div class="message success">
+                    {{successMessage}}</div>}
+                <button class="login-button" type="submit">✅ Create Account</button>
+            </form>
+            <div class="login-footer">Already have an account? <a routerLink="/login">Sign in</a></div>
+        </div>
+    </section>
+</div>

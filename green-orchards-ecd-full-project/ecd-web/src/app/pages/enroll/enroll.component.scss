@@ -1,0 +1,89 @@
+.enroll-page {
+  padding: 72px 0 96px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  color: #1b5e20;
+}
+
+.page-intro {
+  margin: 0 0 2rem;
+  color: #4d6253;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.enrollment-form {
+  padding: 2rem;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1.25rem;
+  margin-bottom: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: #2e4c3f;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid #cfe1d2;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  background: #fff;
+  font: inherit;
+  color: #193d2c;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #66bb6a;
+  box-shadow: 0 0 0 4px rgba(102, 187, 106, 0.14);
+}
+
+.field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.full-width {
+  margin-bottom: 1.1rem;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-message {
+  margin: 0;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+@media (max-width: 680px) {
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

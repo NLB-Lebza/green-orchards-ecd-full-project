@@ -1,0 +1,1 @@
+export interface EcdProgram{id:number;name:string;description:string;minimumAge:number;maximumAge:number;imageUrl:string;createdAt:string}
