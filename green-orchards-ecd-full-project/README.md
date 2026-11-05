@@ -34,4 +34,3 @@ GET/POST `/api/Programs`
 GET/POST `/api/Enrollment`
 GET/POST `/api/Gallery`
 
-No Data Annotations and no FluentValidation are used. Passwords are hashed with BCrypt. JWT authorization is intentionally left as a later security phase.
